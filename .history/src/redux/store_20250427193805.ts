@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage"; // Correct import for local storage
 import { persistStore, persistReducer } from "redux-persist"; // Ensure correct import
-import authReducer from "./feature/authSlice";
+
 import { baseApi } from "./api/baseApi"; // Ensure correct import
 
 const persistConfig = {
@@ -17,7 +18,7 @@ export const store = configureStore({
     auth: persistedReducer,
     [baseApi.reducerPath]: baseApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: (getDefaultMiddleware:any) =>
     getDefaultMiddleware({ serializableCheck: false }).concat(baseApi.middleware),
 });
 

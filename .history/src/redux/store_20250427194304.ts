@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage"; // Correct import for local storage
 import { persistStore, persistReducer } from "redux-persist"; // Ensure correct import
-import authReducer from "./feature/authSlice";
+
 import { baseApi } from "./api/baseApi"; // Ensure correct import
 
 const persistConfig = {
@@ -10,7 +10,7 @@ const persistConfig = {
   whitelist: ["user", "accessToken", "isAuthenticated"], // Ensure these are included
 };
 
-const persistedReducer = persistReducer(persistConfig, authReducer);
+const persistedReducer = persistReducer(persistConfig, authReduce);
 
 export const store = configureStore({
   reducer: {
