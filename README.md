@@ -18,3 +18,7 @@ This is a product management application built with React, Redux, RTK query, Ant
 1. Clone this repository
    ```bash
    git clone https://github.com/Mehebul02/product-management.git
+   ## Installation Instructions
+1. Live link
+   ```bash
+  https://product-management-liart-three.vercel.app/
