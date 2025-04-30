@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 
-
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useGetAllProductQuery } from "../../redux/services/productManagementApi";
 import Container from "../../shared/Container";
 import { IProduct } from "../../types/products";
